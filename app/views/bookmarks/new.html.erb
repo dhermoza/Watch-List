@@ -1,7 +1,7 @@
 <h1>New Bookmark</h1>
 <%= simple_form_for [@list, @bookmark] do |f| %>
 <%= f.input :comment %>
-<%= f.input :movie_id%>
-<%= f.input :list_id %>
+<%= f.association :movie, as: :check_boxes%>
+<%= f.association :list, as: :check_boxes %>
 <%= f.submit %>
 <%end %>
