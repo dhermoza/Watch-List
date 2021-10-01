@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/1600x900/?director);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=@list.url %>');">
   <div class="container text-center">
     <h1 class="display-4"><%= @list.name %></h1>
   </div>
@@ -12,7 +12,7 @@
 <div class="container my-5 d-flex justify-content-center">
   <% @list.movies.each do |m| %>
     <div class="card" style="width: 18rem;">
-      <img src="<%=m.poster_url%>" class="card-img-top" alt="Poster URL">
+      <img src='<%=m.poster_url%>' class="card-img-top" alt="Poster URL">
       <div class="card-body">
         <h5 class="card-title"><%= m.title %></h5>
         <p class="card-text"><i class="fas fa-star"></i> <%= m.rating %></p>

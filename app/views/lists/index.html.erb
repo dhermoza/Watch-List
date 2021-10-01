@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/1600x900/?cinema);">
   <div class="container text-center">
     <h1>Save any kind of movies</h1>
-    <p><%= @lists.first.name %></p>
+
   </div>
 </div>
 
@@ -13,7 +13,7 @@
   <div class="container d-flex justify-content-center">
   <% @lists.each do |l| %>
   <div class="card" style="width: 18rem;">
-    <img src="<%=l.movies.first.poster_url%>" class="card-img-top" alt="Pelis">
+    <img src="<%= l.url%>" class="card-img-top" alt="Pelis">
     <div class="card-body">
       <p class="card-text"><%= link_to l.name, list_path(l) %></p>
     </div>
